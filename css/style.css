@@ -170,6 +170,9 @@ a:hover, a:active {
 }
 
 .sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 30%;
   -webkit-background-size: cover;
   background-size: cover;
@@ -184,7 +187,7 @@ a:hover, a:active {
 }
 .sidebar .logo-title {
   text-align: center;
-  padding-top: 240px;
+  /* padding-top: 240px; */
 }
 .sidebar .logo-title .description {
   font-size: 14px;
@@ -408,8 +411,8 @@ a:hover, a:active {
   text-align: center;
   font-size: 10px;
   margin: 0 auto;
-  bottom: 0;
-  position: absolute;
+  /* bottom: 0;
+  position: absolute; */
   width: 100%;
   padding-bottom: 5px;
   background: #fff;
@@ -680,6 +683,7 @@ a.btn {
     position: absolute;
     border-right: none;
     z-index: 1;
+	justify-content: flex-start;
   }
   .sidebar .logo-title {
     padding-top: 120px;
@@ -711,6 +715,20 @@ a.btn {
   }
 
   .share {
-    display: grid;
+    /* display: grid; */
   }
+}
+
+.sidebar .logo-title .title img {
+	border-radius: 50%;
+	animation: animate 10s infinite linear;
+}
+
+@keyframes animate{
+	from{
+		transform: rotate(0);
+	}
+	to{
+		transform: rotate(360deg);
+	}
 }
